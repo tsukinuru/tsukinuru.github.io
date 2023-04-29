@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>win配置aria2</title>
+      <link href="/posts/a0a00838.html"/>
+      <url>/posts/a0a00838.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="win配置aira2"><a href="#win配置aira2" class="headerlink" title="win配置aira2"></a>win配置aira2</h3><ol><li><p>首先下载aira2文件，该文件可以在<a href="https://github.com/aria2/aria2/releases">Github</a>下载。也可以下载我已经配置好的文件，基于最新版1.36.0，下面的教程都是基于我已经配置好的文件，点击下载<a class="btn-anzhiyu green larger" href="https://ownmoon.lanzouy.com/iYZ3S0u8jw2h"   title="蓝奏云"><i class="far fa-cloud-arrow-down"></i><span>蓝奏云</span></a></p><div class="note success simple"><p>下载后自行对比一下sha256值:<code>6C7B49043DB1066C98537D3B126CBA4D75D81FE5315E435C91579E8D5B57784C</code></p></div></li><li><p>下载文件后，解压压缩包，将解压后的文件放到一个非中文路径，如<code>F:\aria2</code></p></li><li><p>打开压缩包，你会看见以下文件</p><img src="https://s2.loli.net/2023/04/29/yMdkeUiz2xYBTKn.png" alt="image-20230429180948782" style="zoom:50%;" /></li><li><p>在该目录新建一个快捷方式，可以鼠标右键新建，将链接指向<code>aria2.exe</code>，在新建快捷方式上右键，属性，在目标（T）所指向的快捷方式中加入<code>-conf-path=aria2.conf</code>代码。如下图：</p></li></ol><img src="https://s2.loli.net/2023/04/29/Bbv94ArnUyHPOwt.png" alt="image-20230429181129256" style="zoom:50%;" /><ol start="5"><li>上述步骤完成后，运行该快捷方式，你会看到下图，表示运行成功，注意不要关闭弹出的cmd运行框，关闭后就会退出，可以最小化！！！</li></ol><img src="https://s2.loli.net/2023/04/29/7Wp2XjnQcOqRoFG.png" alt="image-20230429181200254" style="zoom:50%;" /><ol start="6"><li>打开下面网站，你会发现下图，这是已连接<a href="http://aria2c.com/">Aria2 Web 控制台</a></li></ol><img src="https://s2.loli.net/2023/04/29/oJTzH9jBLt3p1am.png" alt="image-20230429181244354" style="zoom: 33%;" /><h3 id="通过aira2批量下载音声"><a href="#通过aira2批量下载音声" class="headerlink" title="通过aira2批量下载音声"></a>通过aira2批量下载音声</h3><ol><li>打开网站：<a href="https://asmr.pw/">ASMR基佬中心</a></li><li>批量候选后选择下载，发送到aria2：</li></ol><img src="https://s2.loli.net/2023/04/29/GdrD5Z3OEScquLJ.png" alt="image-20230429181451194" style="zoom:33%;" /><ol start="3"><li>这时你到aira2 web网页控制台，会发现已经开始下载</li></ol><img src="https://s2.loli.net/2023/04/29/rj3UlRApFzgqoZN.png" alt="image-20230429181518533" style="zoom:33%;" /><ol start="4"><li><p>打开一开始的cmd弹窗，会发现已经开始</p><img src="https://s2.loli.net/2023/04/29/VTbEAl9Qz7oHFRC.png" alt="image-20230429181538127" style="zoom: 50%;" /></li><li><p>下载的文件在你aira2文件所在的download文件夹下</p></li></ol><ul><li>所有教程到此结束，如果还是不会可以和我说（TG或者评论，但是我不一定会看到）。所有的配置文件，即下载目录，线程等都可以在<code>aria2.conf</code>文件中配置</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 芝诺乌龟 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> aira2 </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ODBC和JDBC的比较</title>
+      <link href="/posts/3d4929c6.html"/>
+      <url>/posts/3d4929c6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><ol><li><p><font color='red'> ODBC </font>(Ope Database Connectivity)，开放数据库互联，是微软公司开发和定义的一套数据库访问标准，用户也可以直接将sql语句送给ODBC。通过使用ODBC，应用程序能够使用相同的源代码和各种各样的数据库进行交互。下面是ODBC应用系统的体系结构。</p><p>​    一个基于ODBC的应用程序，对数据库的操作不依赖任何DBMS，不直接与DBMS打交道，所有的数据库操作由对应的DBMS的ODBC驱动程序完成。不论是SQL Server、Access还是Oracle数据库，均可用ODBC API进行访问。</p><p>​    ODBC的最大优点是**<font color="red">能以统一的方式处理所有的数据库</font>**</p></li><li><p><font color="red"> JDBC</font>（JavaDatabase Connectivity）是Java与数据库的接口规范，JDBC定义了一个支持标准SQL功能的通用低层API，它由Java 语言编写的类和接口组成，旨在让各数据库开发商为Java程序员提供标准的数据库API。</p><p>​    JDBC API定义了若干Java中的类，表示数据库连接、SQL指令、结果集、数据库元数据等。它允许Java程序员发送SQL指令并处理结果。下图是JDBC的体系架构。</p></li></ol><h2 id="二、联系"><a href="#二、联系" class="headerlink" title="二、联系"></a>二、联系</h2><p>​    JDBC是参考ODBC设计的，两者的相似性很多。</p><p>​    JDBC和ODBC都是<strong>用来连接数据库的启动程序</strong>，JDBC和ODBC由于<strong>具有数据库独立性</strong>甚至<strong>平台无关性</strong>，因而对Internet上异构数据库的访问提供了很好的支持。</p><p>​    JDBC与ODBC都是<strong>基于X&#x2F;Open的SQL调用级接口</strong>；从结构上来讲，JDBC的总体结构类似于ODBC,都有四个组件：<strong>应用程序、驱动程序管理器、驱动程序和数据源</strong>,工作原理亦大体相同；在内容交互方面，JDBC保持了ODBC的基本特性,也独立于特定数据库。 而且都不是直接与数据库交互，而是通过驱动程序管理器。</p><h2 id="三、区别"><a href="#三、区别" class="headerlink" title="三、区别"></a>三、区别</h2><h3 id="1-JDBC比ODBC更容易理解"><a href="#1-JDBC比ODBC更容易理解" class="headerlink" title="1. JDBC比ODBC更容易理解"></a>1. JDBC比ODBC更容易理解</h3><p>​    这个主要是由语言特性决定的，ODBC用C来编写，JDBC用JAVA，C语言相比于JAVA更加抽象。另一方面是在ODBC中写一个查询，需要很多步骤，在JDBC中的数据库查询语句则简单很对，需求的源码比ODBC要少的多。JDBC数据库启动程序要比ODBC简易理解。</p><h3 id="2-JDBC数据库驱动程序面向对象"><a href="#2-JDBC数据库驱动程序面向对象" class="headerlink" title="2. JDBC数据库驱动程序面向对象"></a>2. JDBC数据库驱动程序面向对象</h3><p>​    JDBC用Java编写，完全遵循Java语言的优良特性。通常情况下，只要有Java功能需设计基础的用户都能在最短时间内了解JDBC驱动程序的架构，较量简易上手，能轻而易举的开发出强悍的数据库实际运用程序。而ODBC的话，由于其内部功能复杂，源代码编写要求高。为此即使是一个的C语言的高手，仍然需求花费不少的时间去了解那个数据库启动程序;在编写源代码的时间，还离不开有关的参考书本。</p><h3 id="3-JDBC的移植性要比ODBC要好"><a href="#3-JDBC的移植性要比ODBC要好" class="headerlink" title="3. JDBC的移植性要比ODBC要好"></a>3. JDBC的移植性要比ODBC要好</h3><p>​    通常情况下，安装完ODBC驱动程序之后，还需求经过确定的配置才能够应用。而不相同的配置在不相同数据库服务器之间不能够通用。也那是说，装一次需求配置一次。但是JDBC数据库驱动程序则不相同。假如采用JDBC数据库驱动程序的话，则只需要选取适当的 JDBC数据库驱动程序，就不需要额外的配置。在安装过程中，JDBC数据库驱动程序会自己完成有关的配置。为此JDBC的移植性要比ODBC要好。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 芝诺乌龟 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JDBC </tag>
+            
+            <tag> ODBC </tag>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gradle下载加速.md</title>
       <link href="/posts/f81a8bf5.html"/>
       <url>/posts/f81a8bf5.html</url>
