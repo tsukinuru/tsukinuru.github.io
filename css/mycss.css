@@ -1,6 +1,6 @@
 /* 颜色 */
 :root {
-    --anzhiyu-theme-op: #4259ef23;
+    --anzhiyu-theme-op: #4259f023;
     --anzhiyu-gray-op: #9999992b;
     --anzhiyu-theme-top: var(--anzhiyu-theme);
     --anzhiyu-white: #fff;
@@ -25,7 +25,7 @@
     --anzhiyu-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
     --anzhiyu-logo-color: linear-gradient(215deg, #4584ff 30%, #ff7676 70%);
     --style-border: 1px solid var(--anzhiyu-card-border);
-    --anzhiyu-blue-main: #3b70fc;
+    --anzhiyu-blue-main: #576690;
     --style-border-hover: 1px solid var(--anzhiyu-main);
     --style-border-dashed: 1px dashed var(--anzhiyu-theme-op);
     --style-border-avatar: 4px solid var(--anzhiyu-background);
@@ -38,9 +38,9 @@
   }
   
   [data-theme="light"] {
-    --anzhiyu-theme: #3b70fc;
+    --anzhiyu-theme: #576690;
     --anzhiyu-theme-op: #4259ef23;
-    --anzhiyu-blue: #3b70fc;
+    --anzhiyu-blue: #576690;
     --anzhiyu-red: #d8213c;
     --anzhiyu-pink: #ff7c7c;
     --anzhiyu-green: #57bd6a;
@@ -67,7 +67,7 @@
   
   [data-theme="dark"] {
     --global-bg: #191919;
-    --anzhiyu-theme: #0084ff;
+    --anzhiyu-theme: #b512fb;
     --anzhiyu-theme-op: #0084ff23;
     --anzhiyu-blue: #0084ff;
     --anzhiyu-red: #ff3842;
