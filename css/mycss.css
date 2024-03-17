@@ -47,21 +47,21 @@
     --anzhiyu-fontcolor: #363636;
     --anzhiyu-background: #f7f9fe;
     --anzhiyu-reverse: #000;
-    --anzhiyu-maskbg: rgba(255, 255, 255, 0.6);
-    --anzhiyu-maskbgdeep: rgba(255, 255, 255, 0.85);
+    --anzhiyu-maskbg: #ffffff99;
+    --anzhiyu-maskbgdeep: #ffffffd9;
     --anzhiyu-hovertext: var(--anzhiyu-theme);
     --anzhiyu-ahoverbg: #f7f7fa;
     --anzhiyu-lighttext: var(--anzhiyu-main);
-    --anzhiyu-secondtext: rgba(60, 60, 67, 0.6);
-    --anzhiyu-scrollbar: rgba(60, 60, 67, 0.4);
+    --anzhiyu-secondtext: #3c3c4399;
+    --anzhiyu-scrollbar: #3c3c4366;
     --anzhiyu-card-btn-bg: #edf0f7;
     --anzhiyu-post-blockquote-bg: #fafcff;
     --anzhiyu-post-tabs-bg: #f2f5f8;
     --anzhiyu-secondbg: #edf0f7;
-    --anzhiyu-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
+    --anzhiyu-shadow-nav: 0 5px 12px -5px #6644440d;
     --anzhiyu-card-bg: #fff;
-    --anzhiyu-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
-    --anzhiyu-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
+    --anzhiyu-shadow-lightblack: 0 5px 12px -5px #66444400;
+    --anzhiyu-shadow-light2black: 0 5px 12px -5px #66444400;
     --anzhiyu-card-border: #c0c6d8;
   }
   
