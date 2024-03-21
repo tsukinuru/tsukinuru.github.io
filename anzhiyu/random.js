@@ -1,4 +1,4 @@
-var posts=["posts/d92b6daa/","posts/266ec334/","posts/7429ccc3/","posts/f9a31fa8/"];function toRandomPost(){
+var posts=["posts/d92b6daa/","posts/7429ccc3/","posts/266ec334/","posts/f9a31fa8/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[{"name":"安知鱼","link":"https://blog.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","siteshot":"https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg","color":"vip","tag":"Anzhiyu主题开发者"},{"name":"秋澪Akimio","link":"https://blog.akimio.top/","avatar":"https://img.akimio.top/avatar/akimio.png","descr":"一只喜欢七彩球的枯叶蝶","tag":"梦幻","recommend":true}];
     var refreshNum = 1;
