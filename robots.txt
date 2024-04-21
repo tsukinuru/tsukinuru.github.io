@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /about/
+Sitemap: https://blog.tuuki.top/sitemap.xml
+Sitemap: https://blog.tuuki.top/baidusitemap.xml
