@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Markdown测试文档 | 月楼</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="http://example.com/2025/12/22/Markdown%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><!-- Open Graph--><meta name="description" content="测试Markdown能否正常展示，内容来自Arya"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="月楼"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/favicon.png"><link rel="apple-touch-icon" href="/img/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><meta name="referrer" content="same-origin"/><meta name="referrer" content="no-referrer"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","barrage":{"title":"热评"}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: [],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {"avatar":"https://gravatar.com/avatar","commentBarrage":true},
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","barrage":{"open":"显示热评","close":"关闭热评"},"translate":true,"ctrlOriginalMenu":"按住Ctrl+右键可打开浏览器右键菜单"},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: false,
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: '这里是清羽AI，这篇文章介绍了Arya在线Markdown编辑器。Arya是一款基于Vue和Vditor开发的在线编辑器，具有丰富的功能，如支持流程图、甘特图、时序图、任务列表等图表类型，以及实时预览和本地存储等功能。它支持多种语法格式，包括LaTeX和markdown，并且易于使用',
+    color: false,
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body id="body"><div><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="/img/favicon.png" alt="loading image"></div></div><script>const preloader = {
+    isLoaded: false,
+    endLoading: () => {
+        if (!preloader.isLoaded) {
+            document.getElementById('loading-box').classList.add('loaded');
+            preloader.isLoaded = true;
+            preloader.togglePaceDone();
+        }
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+        preloader.isLoaded = false;
+        preloader.togglePaceDone();
+    },
+    togglePaceDone: () => {
+        document.getElementById('body').className = preloader.isLoaded ? 'pace-done' : '';
+    }
+}
+
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});
+
+setTimeout(() => {
+    preloader.endLoading();
+}, 5000);</script></div><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/Vtuber/">Vtuber<sup>1</sup></a><a href="/tags/%E8%99%9A%E6%8B%9F%E5%81%B6%E5%83%8F/">虚拟偶像<sup>1</sup></a><a href="/tags/%E7%9B%B4%E6%92%AD/">直播<sup>1</sup></a><a href="/tags/%E6%B5%8B%E8%AF%95/">测试<sup>1</sup></a><a href="/tags/Markdown/">Markdown<sup>1</sup></a><a href="/tags/win/">win<sup>1</sup></a><a href="/tags/aria2/">aria2<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/">教程<sup>2</sup></a><a href="/tags/asmr/">asmr<sup>1</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客<sup>1</sup></a><a href="/tags/%E5%9B%BE%E7%89%87/">图片<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/12/"><span class="date">2025/12</span><div class="count-group"><span class="count">5</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">5</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude fas fa-comment"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="twikoo_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
+  await fetch('https://twikoo.tuuki.top', {
+    method: "POST",
+    body: JSON.stringify({
+      "event": "GET_RECENT_COMMENTS",
+      "includeReply": true,
+      "pageSize": 999
+    }),
+    headers: {'Content-Type': 'application/json'}
+  }).then(res => res.json()).then(async ({data}) => {
+    document.querySelector('#twikoo_allcount').innerHTML = data.length
+  })
+})()</script></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/bangumis/"><i class="solitude  fas fa-tv"></i><span>追番</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/Vtuber/">Vtuber<sup>1</sup></a><a href="/tags/%E8%99%9A%E6%8B%9F%E5%81%B6%E5%83%8F/">虚拟偶像<sup>1</sup></a><a href="/tags/%E7%9B%B4%E6%92%AD/">直播<sup>1</sup></a><a href="/tags/%E6%B5%8B%E8%AF%95/">测试<sup>1</sup></a><a href="/tags/Markdown/">Markdown<sup>1</sup></a><a href="/tags/win/">win<sup>1</sup></a><a href="/tags/aria2/">aria2<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/">教程<sup>2</sup></a><a href="/tags/asmr/">asmr<sup>1</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客<sup>1</sup></a><a href="/tags/%E5%9B%BE%E7%89%87/">图片<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">3.1k</div></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a href="/" title="返回博客主页" id="site-name"><span class="title">Yue</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Markdown测试文档</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/bangumis/"><i class="solitude  fas fa-tv"></i><span>追番</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fas fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://static.likepoems.com/2023/09/19/image0442007070c2020e.png" alt="Markdown测试文档"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF/">拉普拉斯</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B5%8B%E8%AF%95/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>测试</span></a><a class="post-meta__tags" href="/tags/Markdown/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>Markdown</span></a></div></div></div></div><h1 class="post-title">Markdown测试文档</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-12-22 20:11:28"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-12-22T12:11:28.108Z">2025-12-22T12:11:28.108Z</time></span><span class="post-meta-date" title="最后更新于 2023-09-19 14:02:09"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2023-09-19T06:02:09.000Z">2023-09-19T06:02:09.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">1.4k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fas fa-clock" title="阅读耗时"></i><span>6 分钟</span></span><span class="post-meta-position" title="作者IP归属地为China"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>China</span></span><a class="post-meta-pv" href="/2025/12/22/Markdown%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/" title="文章热度"><i class="post-meta-icon solitude fas fa-fire-flame-curved"></i><span id="twikoo_visitors"><i class="solitude fas fa-spinner fa-spin"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fas fa-comment"></i><a href="/2025/12/22/Markdown%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/#post-comment"><span class="twikoo-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a></span></div></div></div><div class="post-radius-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><div class="post-ai"><div class="ai-title"><div class="ai-title-left"><i class="ai-title-icon solitude fas fa-newspaper"></i><div class="ai-title-text">文章摘要</div></div><div class="ai-tag" id="ai-tag">FreeChat</div></div><div class="ai-explanation" style="display: block;"></div></div><h1>欢迎使用 <code>Arya</code> 在线 Markdown 编辑�?</h1>
+<h2 id="Arya，是一款基�-Vue、Vditor，为未来而构建的在线-Markdown-编辑器；轻量且强大：内置粘贴-HTML-自动转换�-Markdown，支持流程图、甘特图、时序图、任�-f-列表，可导出携带样式的图片、PDF、微信公众号特制�-HTML-等等�"><a target="_blank" rel="noopener" href="https://markdown.lovejade.cn/?utm_source=markdown.lovejade.cn">Arya</a>，是一款基�?<code>Vue</code>、<code>Vditor</code>，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换�?Markdown，支持流程图、甘特图、时序图、任�?f 列表，可导出携带样式的图片、PDF、微信公众号特制�?HTML 等等�?</h2>
+<h2 id="如何使用">如何使用</h2>
+<p><strong>微注</strong>：清空目前这份默认文档，即处于可使用态。<a target="_blank" rel="noopener" href="https://markdown.lovejade.cn/?utm_source=markdown.lovejade.cn">Arya</a> 另一大优点在于：编辑内容只会在您本地进行保存，不会上传您的数据至服务器，<strong>绝不窥测用户个人隐私，可放心使用</strong>；Github 源码：<a target="_blank" rel="noopener" href="https://github.com/nicejade/markdown-online-editor">markdown-online-editor</a>，部分功能仍在开发🚧，敬请期待�?<br>
+默认�?<a target="_blank" rel="noopener" href="https://hacpai.com/article/1577370404903?utm_source=github.com">所见即所得</a> 模式，可通过 <code>�?�?M</code>（<code>Ctrl-�?M</code>）进行切换；或通过以下方式�?</p>
+<ul>
+<li>所见即所得：<code>�?�?7</code>（<code>Ctrl-alt-7</code>）；</li>
+<li>即时渲染：<code>�?�?8</code>（<code>Ctrl-alt-8</code>）；</li>
+<li>分屏渲染：<code>�?�?9</code>（<code>Ctrl-alt-9</code>）；</li>
+</ul>
+<h3 id="PPT-预览">PPT 预览</h3>
+<h2 id="如果您用�-PPT-预览（入口在-设置-中），需要注意，这里暂还不能支持各种图表的渲染；您可以使�-来定义水平方向上幻灯片，�-来定义垂直幻灯片；更多设定可以参�-RevealJs-文档�">如果您用�?<code>PPT</code> 预览（入口在 <code>设置</code> 中），需要注意，这里暂还不能支持各种图表的渲染；您可以使�?<code>---</code> 来定义水平方向上幻灯片，�?<code>--</code> 来定义垂直幻灯片；更多设定可以参�?<a target="_blank" rel="noopener" href="https://github.com/hakimel/reveal.js#table-of-contents">RevealJs 文档</a>�?</h2>
+<h2 id="什么是-Markdown">什么是 Markdown</h2>
+<h2 id="Markdown-是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号，以最小的输入代价，生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，粗体�-斜体-或�-超文本链接，更棒的是，它还可以�"><a target="_blank" rel="noopener" href="https://nicelinks.site/tags/Markdown/?utm_source=markdown.lovejade.cn">Markdown</a> 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号，以最小的输入代价，生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong>�?斜体* 或�?<a target="_blank" rel="noopener" href="https://vue-cli3.lovejade.cn/explore/">超文本链接</a>，更棒的是，它还可以�?</h2>
+<h3 id="1-制作待办事宜-Todo-列表">1. 制作待办事宜 <code>Todo</code> 列表</h3>
+<ul>
+<li>[x] 🎉 通常 <code>Markdown</code> 解析器自带的基本功能�?- [x] 🍀 支持 <strong>流程�?*�?*甘特�?*�?*时序�?*�?*任务列表</strong>�?- [x] 🏁 支持粘贴 HTML 自动转换�?Markdown�?- [x] 💃🏻 支持插入原生 Emoji、设置常用表情列表；</li>
+<li>[x] 🚑 支持编辑内容保存 <strong>本地存储</strong>，防止意外丢失；</li>
+<li>[x] 📝 支持 <strong>实时预览</strong>，主窗口大小拖拽，字符计数；</li>
+<li>[x] 🛠 支持常用快捷�?<strong>Tab</strong>)，及代码块添加复�?- [x] �?支持 <strong>导出</strong> 携带样式�?PDF、PNG、JPEG 等；</li>
+<li>[x] �?升级 Vditor，新增对 <code>echarts</code> 图表的支持；</li>
+<li>[x] 👏 支持检查并格式�?Markdown 语法，使其专业；</li>
+<li>[x] 🦑 支持五线谱、及 <a target="_blank" rel="noopener" href="https://github.com/b3log/vditor/issues/117?utm_source=hacpai.com#issuecomment-526986052">部分站点、视频、音频解析</a>�?- [x] 🌟 增加�?*<em>所见即所�?</em> 编辑模式的支�?<code>�?�?M</code>)�?</li>
+</ul>
+<hr>
+<h3 id="2-书写一个质能守恒公�-LaTeX">2. 书写一个质能守恒公�?<a target="_blank" rel="noopener" href="https://www.latex-project.org/">^LaTeX</a></h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E=mc<span class="built_in">^</span>2</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="3-高亮一段代�-code">3. 高亮一段代�?<a target="_blank" rel="noopener" href="https://studio.code.org/">^code</a></h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给页面里所有的 DOM 元素添加一�?1px 的描边（outline�?</span></span><br><span class="line">[].<span class="property">forEach</span>.<span class="title function_">call</span>($$(<span class="string">&quot;*&quot;</span>),<span class="keyword">function</span>(<span class="params">a</span>)&#123;</span><br><span class="line">  a.<span class="property">style</span>.<span class="property">outline</span>=<span class="string">&quot;1px solid #&quot;</span>+(~~(<span class="title class_">Math</span>.<span class="title function_">random</span>()*(<span class="number">1</span>&lt;&lt;<span class="number">24</span>))).<span class="title function_">toString</span>(<span class="number">16</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="4-高效绘制-流程图">4. 高效绘制 <a target="_blank" rel="noopener" href="https://github.com/knsv/mermaid#flowchart">流程图</a></h3>
+<div class="mermaid">graph TD;
+  A--&gt; B;
+  A--&gt; C;
+  B--&gt; D;
+  C--&gt; D;</div>
+<h3 id="5-高效绘制-序列图">5. 高效绘制 <a target="_blank" rel="noopener" href="https://github.com/knsv/mermaid#sequence-diagram">序列图</a></h3>
+<div class="mermaid">sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice-&gt; John: Hello John, how are you?
+  loop Healthcheck
+      John-&gt; John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts &lt;br&#x2F;&gt; prevail...
+  John--&gt; Alice: Great!
+  John-&gt; Bob: How about you?
+  Bob--&gt; John: Jolly good!</div>
+<h3 id="6-高效绘制-甘特图">6. 高效绘制 <a target="_blank" rel="noopener" href="https://github.com/knsv/mermaid#gantt-diagram">甘特图</a></h3>
+<blockquote>
+<p>*<em>甘特�?</em> 内在思想简单。基本是一条线条图，横轴表示时间，纵轴表示活动（项目），线条表示在整个期间上计划和实际的活动完成情况。它直观地表明任务计划在什么时候进行，及实际进展与计划要求的对比�?</p>
+</blockquote>
+<div class="mermaid">gantt
+  title 项目开发流�?  section 项目确定
+    需求分�?      : a1, 2019-06-22, 3d
+    可行性报�?    : after a1, 5d
+    概念验证       : 5d
+  section 项目实施
+    概要设计      : 2019-07-05  , 5d
+    详细设计      : 2019-07-08, 10d
+    编码          : 2019-07-15, 10d
+    测试          : 2019-07-22, 5d
+  section 发布验收
+    发布: 2d
+    验收: 3d</div>
+<h3 id="7-支持图表">7. 支持图表</h3>
+<div class="mermaid">{
+  &quot;backgroundColor&quot;: &quot;#212121&quot;,
+  &quot;title&quot;: {
+    &quot;text&quot;: &quot;「晚晴幽草轩」访问来�?,
+    &quot;subtext&quot;: &quot;2019 �?6 月份&quot;,
+    &quot;x&quot;: &quot;center&quot;,
+    &quot;textStyle&quot;: {
+      &quot;color&quot;: &quot;#f2f2f2&quot;
+    }
+  },
+  &quot;tooltip&quot;: {
+    &quot;trigger&quot;: &quot;item&quot;,
+    &quot;formatter&quot;: &quot;{a} &lt;br&#x2F;&gt;{b} : {c} ({d}%)&quot;
+  },
+  &quot;legend&quot;: {
+    &quot;orient&quot;: &quot;vertical&quot;,
+    &quot;left&quot;: &quot;left&quot;,
+    &quot;data&quot;: [
+      &quot;搜索引擎&quot;,
+      &quot;直接访问&quot;,
+      &quot;推荐&quot;,
+      &quot;其他&quot;,
+      &quot;社交平台&quot;
+    ],
+    &quot;textStyle&quot;: {
+      &quot;color&quot;: &quot;#f2f2f2&quot;
+    }
+  },
+  &quot;series&quot;: [
+    {
+      &quot;name&quot;: &quot;访问来源&quot;,
+      &quot;type&quot;: &quot;pie&quot;,
+      &quot;radius&quot;: &quot;55%&quot;,
+      &quot;center&quot;: [
+        &quot;50%&quot;,
+        &quot;60%&quot;
+      ],
+      &quot;data&quot;: [
+        {
+          &quot;value&quot;: 10440,
+          &quot;name&quot;: &quot;搜索引擎&quot;,
+          &quot;itemStyle&quot;: {
+            &quot;color&quot;: &quot;#ef4136&quot;
+          }
+        },
+        {
+          &quot;value&quot;: 4770,
+          &quot;name&quot;: &quot;直接访问&quot;
+        },
+        {
+          &quot;value&quot;: 2430,
+          &quot;name&quot;: &quot;推荐&quot;
+        },
+        {
+          &quot;value&quot;: 342,
+          &quot;name&quot;: &quot;其他&quot;
+        },
+        {
+          &quot;value&quot;: 18,
+          &quot;name&quot;: &quot;社交平台&quot;
+        }
+      ],
+      &quot;itemStyle&quot;: {
+        &quot;emphasis&quot;: {
+          &quot;shadowBlur&quot;: 10,
+          &quot;shadowOffsetX&quot;: 0,
+          &quot;shadowColor&quot;: &quot;rgba(0, 0, 0, 0.5)&quot;
+        }
+      }
+    }
+  ]
+}</div>
+<blockquote>
+<p><strong>备注</strong>：上�?echarts 图表📈，其数据，须使用严格�?<strong>JSON</strong> 格式；您可使�?JSON.stringify(data)，将对象传换从而得标准数据，即可正常使用�?</p>
+</blockquote>
+<h3 id="8-绘制表格">8. 绘制表格</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">作品名称</th>
+<th style="text-align:left">在线地址</th>
+<th style="text-align:center">上线日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">倾城之链</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://nicelinks.site/??utm_source=markdown.lovejade.cn">https://nicelinks.site</a></td>
+<td style="text-align:center">2017-09-20</td>
+</tr>
+<tr>
+<td style="text-align:left">晚晴幽草�?</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://jeffjade.com/??utm_source=markdown.lovejade.cn">https://jeffjade.com</a></td>
+<td style="text-align:center">2014-09-20</td>
+</tr>
+<tr>
+<td style="text-align:left">静轩之别�?</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="http://quickapp.lovejade.cn/??utm_source=markdown.lovejade.cn">http://quickapp.lovejade.cn</a></td>
+<td style="text-align:center">2019-01-12</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-更详细语法说�">9. 更详细语法说�?</h3>
+<p>想要查看更详细的语法说明，可以参考这�?<a target="_blank" rel="noopener" href="https://github.com/nicejade/nice-front-end-tutorial/blob/master/tutorial/markdown-tutorial.md">Markdown 资源列表</a>，涵盖入门至进阶教程，以及资源、平台等信息，能让您对她有更深的认知�?<br>
+总而言之，不同于其�?*所见即所�? 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦�?<em>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡�?</em> 目前它已经成为世界上最大的技术分享网�?<code>GitHub</code> �?技术问答网�?<code>StackOverFlow</code> 的御用书写格式，而且越发流行，正在在向各行业渗透�?<br>
+最新更新于 2019.08.21</p>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src= "" data-lazy-src="https://i0.hdslb.com/bfs/article/cac07cc3570c9972aeeb9f498ff09280169deff5.jpg@1192w_1192h.avif"></div><div class="post-copyright__author_name">月月</div><div class="post-copyright__author_desc">清辉月影</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">月楼</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B5%8B%E8%AF%95/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>测试<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/Markdown/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>Markdown<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/12/22/V-Vtuber-VUP%E5%85%A8%E9%9D%A2%E4%BB%8B%E7%BB%8D/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">V、Vtuber、VUP全面介绍：虚拟偶像的魅力世界</div></div></a></div><div class="next-post pull-right"><a href="/2025/12/22/hello-world/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="twikoo-count"><i class="solitude fas fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src= "" data-lazy-src="https://i0.hdslb.com/bfs/article/cac07cc3570c9972aeeb9f498ff09280169deff5.jpg@1192w_1192h.avif"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">月月</div><div class="desc">分享一些想分享的。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">欢迎使用 Arya 在线 Markdown 编辑�?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Arya%EF%BC%8C%E6%98%AF%E4%B8%80%E6%AC%BE%E5%9F%BA%EF%BF%BD-Vue%E3%80%81Vditor%EF%BC%8C%E4%B8%BA%E6%9C%AA%E6%9D%A5%E8%80%8C%E6%9E%84%E5%BB%BA%E7%9A%84%E5%9C%A8%E7%BA%BF-Markdown-%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%9B%E8%BD%BB%E9%87%8F%E4%B8%94%E5%BC%BA%E5%A4%A7%EF%BC%9A%E5%86%85%E7%BD%AE%E7%B2%98%E8%B4%B4-HTML-%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2%EF%BF%BD-Markdown%EF%BC%8C%E6%94%AF%E6%8C%81%E6%B5%81%E7%A8%8B%E5%9B%BE%E3%80%81%E7%94%98%E7%89%B9%E5%9B%BE%E3%80%81%E6%97%B6%E5%BA%8F%E5%9B%BE%E3%80%81%E4%BB%BB%EF%BF%BD-f-%E5%88%97%E8%A1%A8%EF%BC%8C%E5%8F%AF%E5%AF%BC%E5%87%BA%E6%90%BA%E5%B8%A6%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9B%BE%E7%89%87%E3%80%81PDF%E3%80%81%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%89%B9%E5%88%B6%EF%BF%BD-HTML-%E7%AD%89%E7%AD%89%EF%BF%BD"><span class="toc-text">Arya，是一款基�?Vue、Vditor，为未来而构建的在线 Markdown 编辑器；轻量且强大：内置粘贴 HTML 自动转换�?Markdown，支持流程图、甘特图、时序图、任�?f 列表，可导出携带样式的图片、PDF、微信公众号特制�?HTML 等等�?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PPT-%E9%A2%84%E8%A7%88"><span class="toc-text">PPT 预览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%82%A8%E7%94%A8%EF%BF%BD-PPT-%E9%A2%84%E8%A7%88%EF%BC%88%E5%85%A5%E5%8F%A3%E5%9C%A8-%E8%AE%BE%E7%BD%AE-%E4%B8%AD%EF%BC%89%EF%BC%8C%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%EF%BC%8C%E8%BF%99%E9%87%8C%E6%9A%82%E8%BF%98%E4%B8%8D%E8%83%BD%E6%94%AF%E6%8C%81%E5%90%84%E7%A7%8D%E5%9B%BE%E8%A1%A8%E7%9A%84%E6%B8%B2%E6%9F%93%EF%BC%9B%E6%82%A8%E5%8F%AF%E4%BB%A5%E4%BD%BF%EF%BF%BD-%E6%9D%A5%E5%AE%9A%E4%B9%89%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E4%B8%8A%E5%B9%BB%E7%81%AF%E7%89%87%EF%BC%8C%EF%BF%BD-%E6%9D%A5%E5%AE%9A%E4%B9%89%E5%9E%82%E7%9B%B4%E5%B9%BB%E7%81%AF%E7%89%87%EF%BC%9B%E6%9B%B4%E5%A4%9A%E8%AE%BE%E5%AE%9A%E5%8F%AF%E4%BB%A5%E5%8F%82%EF%BF%BD-RevealJs-%E6%96%87%E6%A1%A3%EF%BF%BD"><span class="toc-text">如果您用�?PPT 预览（入口在 设置 中），需要注意，这里暂还不能支持各种图表的渲染；您可以使�?--- 来定义水平方向上幻灯片，�?-- 来定义垂直幻灯片；更多设定可以参�?RevealJs 文档�?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Markdown"><span class="toc-text">什么是 Markdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-%E6%98%AF%E4%B8%80%E7%A7%8D%E6%96%B9%E4%BE%BF%E8%AE%B0%E5%BF%86%E3%80%81%E4%B9%A6%E5%86%99%E7%9A%84%E7%BA%AF%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%EF%BC%8C%E7%94%A8%E6%88%B7%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%BF%99%E4%BA%9B%E6%A0%87%E8%AE%B0%E7%AC%A6%E5%8F%B7%EF%BC%8C%E4%BB%A5%E6%9C%80%E5%B0%8F%E7%9A%84%E8%BE%93%E5%85%A5%E4%BB%A3%E4%BB%B7%EF%BC%8C%E7%94%9F%E6%88%90%E6%9E%81%E5%AF%8C%E8%A1%A8%E7%8E%B0%E5%8A%9B%E7%9A%84%E6%96%87%E6%A1%A3%EF%BC%9A%E8%AD%AC%E5%A6%82%E6%82%A8%E6%AD%A3%E5%9C%A8%E9%98%85%E8%AF%BB%E7%9A%84%E8%BF%99%E4%BB%BD%E6%96%87%E6%A1%A3%E3%80%82%E5%AE%83%E4%BD%BF%E7%94%A8%E7%AE%80%E5%8D%95%E7%9A%84%E7%AC%A6%E5%8F%B7%E6%A0%87%E8%AE%B0%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A0%87%E9%A2%98%EF%BC%8C%E5%88%86%E5%89%B2%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AE%B5%E8%90%BD%EF%BC%8C%E7%B2%97%E4%BD%93%EF%BF%BD-%E6%96%9C%E4%BD%93-%E6%88%96%EF%BF%BD-%E8%B6%85%E6%96%87%E6%9C%AC%E9%93%BE%E6%8E%A5%EF%BC%8C%E6%9B%B4%E6%A3%92%E7%9A%84%E6%98%AF%EF%BC%8C%E5%AE%83%E8%BF%98%E5%8F%AF%E4%BB%A5%EF%BF%BD"><span class="toc-text">Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号，以最小的输入代价，生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，粗体�?斜体* 或�?超文本链接，更棒的是，它还可以�?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%B6%E4%BD%9C%E5%BE%85%E5%8A%9E%E4%BA%8B%E5%AE%9C-Todo-%E5%88%97%E8%A1%A8"><span class="toc-text">1. 制作待办事宜 Todo 列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B9%A6%E5%86%99%E4%B8%80%E4%B8%AA%E8%B4%A8%E8%83%BD%E5%AE%88%E6%81%92%E5%85%AC%EF%BF%BD-LaTeX"><span class="toc-text">2. 书写一个质能守恒公�?^LaTeX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%AB%98%E4%BA%AE%E4%B8%80%E6%AE%B5%E4%BB%A3%EF%BF%BD-code"><span class="toc-text">3. 高亮一段代�?^code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%AB%98%E6%95%88%E7%BB%98%E5%88%B6-%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-text">4. 高效绘制 流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%AB%98%E6%95%88%E7%BB%98%E5%88%B6-%E5%BA%8F%E5%88%97%E5%9B%BE"><span class="toc-text">5. 高效绘制 序列图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E9%AB%98%E6%95%88%E7%BB%98%E5%88%B6-%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-text">6. 高效绘制 甘特图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%94%AF%E6%8C%81%E5%9B%BE%E8%A1%A8"><span class="toc-text">7. 支持图表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC"><span class="toc-text">8. 绘制表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%9B%B4%E8%AF%A6%E7%BB%86%E8%AF%AD%E6%B3%95%E8%AF%B4%EF%BF%BD"><span class="toc-text">9. 更详细语法说�?</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2025/12/22/V-Vtuber-VUP%E5%85%A8%E9%9D%A2%E4%BB%8B%E7%BB%8D/" title="V、Vtuber、VUP全面介绍：虚拟偶像的魅力世界"><div class="thumbnail"><img alt="V、Vtuber、VUP全面介绍：虚拟偶像的魅力世界" src= "" data-lazy-src="https://img.tuuki.top/file/1743561497950_yyjztt.png"></div><div class="content"><span class="title" href="/2025/12/22/V-Vtuber-VUP%E5%85%A8%E9%9D%A2%E4%BB%8B%E7%BB%8D/" title="V、Vtuber、VUP全面介绍：虚拟偶像的魅力世界">V、Vtuber、VUP全面介绍：虚拟偶像的魅力世界</span><span class="categories" href="/2025/12/22/V-Vtuber-VUP%E5%85%A8%E9%9D%A2%E4%BB%8B%E7%BB%8D/">娱乐文化</span></div></a><a class="aside-list-item" href="/2025/12/22/Markdown%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/" title="Markdown测试文档"><div class="thumbnail"><img alt="Markdown测试文档" src= "" data-lazy-src="https://static.likepoems.com/2023/09/19/image0442007070c2020e.png"></div><div class="content"><span class="title" href="/2025/12/22/Markdown%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/" title="Markdown测试文档">Markdown测试文档</span><span class="categories" href="/2025/12/22/Markdown%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/">拉普拉斯</span></div></a><a class="aside-list-item" href="/2025/12/22/hello-world/" title="Hello World"><div class="thumbnail"><img alt="Hello World" src= "" data-lazy-src="https://i0.hdslb.com/bfs/openplatform/d158bb152d83d8510628d3e1aee878646de4f1cf.webp"></div><div class="content"><span class="title" href="/2025/12/22/hello-world/" title="Hello World">Hello World</span></div></a><a class="aside-list-item" href="/2025/12/22/win%E9%85%8D%E7%BD%AEAria2/" title="windows配置aria2"><div class="thumbnail"><img alt="windows配置aria2" src= "" data-lazy-src="https://i0.imgs.ovh/2024/03/20/eEXgT.th.webp"></div><div class="content"><span class="title" href="/2025/12/22/win%E9%85%8D%E7%BD%AEAria2/" title="windows配置aria2">windows配置aria2</span></div></a><a class="aside-list-item" href="/2025/12/22/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E5%A5%BD%E7%9C%8B%E7%9A%84%E5%A4%B4%E5%9B%BE/" title="如何生成好看的头图"><div class="thumbnail"><img alt="如何生成好看的头图" src= "" data-lazy-src="https://i0.hdslb.com/bfs/openplatform/91e71bcf02550481d75c842408320c32f9e1eec4.png@1e_1c.webp"></div><div class="content"><span class="title" href="/2025/12/22/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E5%A5%BD%E7%9C%8B%E7%9A%84%E5%A4%B4%E5%9B%BE/" title="如何生成好看的头图">如何生成好看的头图</span><span class="categories" href="/2025/12/22/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E5%A5%BD%E7%9C%8B%E7%9A%84%E5%A4%B4%E5%9B%BE/">麦克斯韦</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2025 By<a class="footer-bar-link" href="/" title="月月">月月</a></div><div class="beian-group"><div><a class="footer-bar-link" target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=20230413" title="萌ICP备20230413号"><div><img class="beian-icon" src= "" data-lazy-src="https://icp.gov.moe/images/ico64.png" alt="萌ICP备20230413号"></div><span class="beian-name">萌ICP备20230413号</span></a></div><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div><div class="footer-bar-right"><a class="footer-bar-link" href="/atom.xml" title="">RSS</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" title=""><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div></div><div><div class="comment-barrage needEndHide"></div></div></footer></div><div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/categories/')||rm.hideRightMenu()"><i class="solitude fas fa-clone"></i><span>全部分类</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><script defer src="/js/post_ai.js?v=3.0.21"></script><!-- Music player scripts--><!-- Cover color processing scripts--><script defer src="https://cdn.jsdelivr.net/npm/colorthief@2.6.0/dist/color-thief.min.js"></script><script defer src="/js/covercolor/local.js?v=3.0.21"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><script defer src="/js/right_menu.js?v=3.0.21"></script><div class="js-pjax"><script>(() => {
+    const getCount = () => {
+        const ele = document.querySelectorAll('.twikoo-count')
+        if (!ele) return
+        twikoo.getCommentsCount({
+            envId: 'https://twikoo.tuuki.top',
+            region: '',
+            urls: [window.location.pathname],
+            includeReply: false
+        }).then(res => {
+            ele.forEach(item => item.textContent = res[0].count)
+        }).catch(err => {
+            console.error(err)
+        })
+    }
+    const init = () => {
+        twikoo.init(Object.assign({
+            el: '#twikoo-wrap',
+            envId: 'https://twikoo.tuuki.top',
+            region: '',
+            path: window.location.pathname,
+            onCommentLoaded: () => {
+                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+            }
+        }, null))
+
+         && getCount()
+        sco.owoBig({
+            body: '.OwO-body',
+            item: '.OwO-items li'
+        })
+
+        true && barrageTwikoo()
+    }
+
+    const loadTwikoo = () => {
+        if (typeof twikoo === 'object') setTimeout(init,0)
+        else utils.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js').then(init)
+    }
+
+    if ('Twikoo' === 'Twikoo' || true) {
+        if (true) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+        else loadTwikoo()
+    } else {
+        window.loadTwoComment = loadTwikoo
+    }
+})()
+</script><script>async function barrageTwikoo() {
+    await fetch("https://twikoo.tuuki.top", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            event: "COMMENT_GET",
+            accessToken: "",
+            url: window.location.pathname
+        })
+    }).then(async res => {
+        if (!res.ok) throw new Error("HTTP error! status: " + res.status)
+        const data = await res.json();
+        const init = () => {
+            initializeCommentBarrage((data.data).map(item => Object.assign({
+                content: item.comment,
+                nick: item.nick,
+                mailMd5: item.mailMd5,
+                id: item.id
+            })))
+        }
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=3.0.21').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script><script>mermaid.run();
+</script><script defer pjax src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--></body></html>
+        <script>
+            const posts = ["2025/12/22/V-Vtuber-VUP全面介绍/","2025/12/22/Markdown测试文档/","2025/12/22/hello-world/","2025/12/22/win配置Aria2/","2025/12/22/如何生成好看的头图/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
